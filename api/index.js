@@ -1,7 +1,6 @@
-const express = require("express");
-const app = express();
+require("dotenv").config();
+const app = require("./app");
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+const PORT = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
