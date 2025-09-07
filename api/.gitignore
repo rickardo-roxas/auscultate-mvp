@@ -2,19 +2,21 @@
 node_modules/
 
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 
 # Dependency directories
-pids
-logs
+pids/
 *.pid
 *.seed
 *.pid.lock
 
+# Environment variables
+.env*
+
 # Optional npm cache directory
-.npm
+.npm/
 
 # Optional eslint cache
 .eslintcache
@@ -22,5 +24,6 @@ logs
 # Optional REPL history
 .node_repl_history
 
-# Environment variables
-.env*
+# Build artifacts (if applicable)
+dist/
+build/
