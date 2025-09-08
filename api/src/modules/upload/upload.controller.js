@@ -1,5 +1,4 @@
-const multer = require("multer");
-const path = require("path");
+import multer from "multer";
 
 // Multer storage engine configuration to save files to disk in "uploads" folder
 const storage = multer.diskStorage({
@@ -63,6 +62,4 @@ async function uploadFile(req, res) {
   });
 }
 
-module.exports = {
-  uploadFile,
-};
+export default { uploadFile };

@@ -1,16 +1,14 @@
-const express = require("express");
+import express from "express";
 const app = express();
-
-// Swagger setup
-const swaggerUi = require("swagger-ui-express");
-const swaggerSpecs = require("./config/swagger.config");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// routes
+// swagger config her
 
-// Swagger docs
-app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
+import uploadRoutes from "./src/modules/upload/upload.routes.js";
 
-module.exports = app;
+app.get("/", (_req, res) => res.send("API is running"));
+app.use("/upload", uploadRoutes);
+
+export default app;
